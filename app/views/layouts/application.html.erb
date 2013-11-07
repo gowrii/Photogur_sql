@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photogur</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<%= yield :header_content %>
+	</header>
+
+	<section id="container">
+		<section id="nav">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+
+		<section id="content">
+			<%= yield %>
+		</section>
+	</section>
+
+
+ 
+</body>
+</html>

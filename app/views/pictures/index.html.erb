@@ -1,0 +1,9 @@
+<% content_for :header_content do %>
+	<h1>Pictures</h1>
+<% end %>
+<%= link_to "New Picture", "/pictures/new" %>
+
+<% @pictures.each do |picture| %>
+  <p><%= picture[:title] %>, <%= picture[:artist] %></p>
+  <img src="<%= picture[:url] %>">
+<% end %>
