@@ -7,3 +7,14 @@
   <p><%= picture[:title] %>, <%= picture[:artist] %></p>
   <img src="<%= picture[:url] %>">
 <% end %>
+
+
+
+<% content_for :sidebar_content do %>
+<h3>Most recent pictures</h3>
+<ul>
+<% @recent_pics.each do |picture| %>
+<li><%= picture.title %>:  <%= picture.artist %></li>
+<%end%>
+</ul>
+<%end%>

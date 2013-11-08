@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
+    
+    @recent_pics = Picture.recent_pics
   end
 
   def show
